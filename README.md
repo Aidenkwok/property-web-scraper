@@ -25,3 +25,8 @@ Before running this project, ensure that you have the following installed:
     npm build
     npm start [insert_url_here]
     ```
+
+## Testing
+    ```shell
+    npm test
+    ```

@@ -25,6 +25,6 @@ export const getBathroomNumberFromDescription = (
   isSingleRoom?: boolean
 ) => {
   return isSingleRoom
-    ? description?.match(singleRoomBathroomRegex)?.[0] || 0
+    ? description?.match(singleRoomBathroomRegex)?.[0] || ""
     : description?.match(bathroomRegex)?.[1] || "";
 };
