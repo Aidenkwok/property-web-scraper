@@ -22,7 +22,7 @@ Before running this project, ensure that you have the following installed:
     ```
 3. Build and run the scraper:
     ```shell
-    npm build
+    npm run build
     npm start [insert_url_here]
     ```
 
