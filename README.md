@@ -27,6 +27,8 @@ Before running this project, ensure that you have the following installed:
     ```
 
 ## Testing
-    ```shell
-    npm test
-    ```
+Run unit tests with jest using:
+
+```shell
+npm test
+```

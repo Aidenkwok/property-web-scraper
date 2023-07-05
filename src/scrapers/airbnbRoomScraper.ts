@@ -20,6 +20,7 @@ export const airbnbRoomScraper = async (
       throw Error("please provide a url of a room on Airbnb");
     }
 
+    // open up a headless browser
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
@@ -41,6 +42,7 @@ export const airbnbRoomScraper = async (
       element.textContent?.trim()
     );
 
+    // if room is shared then the description is different
     const isSingleRoom = title?.includes("Room in");
 
     // get property description
@@ -79,6 +81,7 @@ export const airbnbRoomScraper = async (
       }
     );
 
+    // extract data from description and title
     const bedrooms = getBedroomNumberFromDescription(description);
     const bathrooms = getBathroomNumberFromDescription(
       description,
@@ -86,6 +89,7 @@ export const airbnbRoomScraper = async (
     );
     const propertyType = getPropertyTypeFromTitle(title);
 
+    // log out all data
     console.log(`Property Name: ${propertyName}`);
     console.log(`Property type: ${propertyType}`);
     console.log(`Bedrooms: ${bedrooms}`);
